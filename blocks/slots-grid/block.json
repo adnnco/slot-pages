@@ -1,6 +1,6 @@
 {
   "apiVersion": 2,
-  "name": "slots-pages/slots-grid",
+  "name": "slot-pages/slots-grid",
   "title": "Slots Grid",
   "category": "widgets",
   "icon": "grid-view",
