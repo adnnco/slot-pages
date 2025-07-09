@@ -11,7 +11,7 @@ class Slot_Pages {
 	/**
 	 * Meta fields definition
 	 */
-	private $meta_fields = [
+	private array $meta_fields = [
 		'_slot_rating'    => [
 			'label'       => 'Star Rating',
 			'type'        => 'number',
@@ -27,9 +27,10 @@ class Slot_Pages {
 		],
 		'_slot_rtp'       => [
 			'label'       => 'RTP (%)',
-			'type'        => 'text',
+			'type'        => 'number',
+			'attributes'  => 'min="0" max="100" step="0.1"',
 			'description' => 'Return to player percentage',
-			'sanitize'    => 'sanitize_text_field'
+			'sanitize'    => 'floatval'
 		],
 		'_slot_min_wager' => [
 			'label'      => 'Minimum Wager',
@@ -163,12 +164,12 @@ class Slot_Pages {
 	}
 
 	/**
-	 * Add meta boxes for slot details
+	 * Add meta boxes for slot attributes
 	 */
 	public function add_meta_boxes(): void {
 		add_meta_box(
-			'slot_details',
-			__( 'Slot Details', 'slot-pages' ),
+			'slot_attributes',
+			__( 'Slot Attributes', 'slot-pages' ),
 			[ $this, 'render_meta_box' ],
 			'slot',
 			'normal',

@@ -22,7 +22,7 @@ define( 'SLOT_PAGES_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SLOT_PAGES_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 // Include required files
-require_once SLOT_PAGES_PLUGIN_DIR . 'includes/class-slot-pages.php';
+require_once SLOT_PAGES_PLUGIN_DIR . 'classes/class-slot-pages.php';
 
 // Initialize the plugin
 function slot_pages_init(): void {
