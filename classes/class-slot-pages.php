@@ -342,9 +342,6 @@ class Slot_Pages {
 		);
 
 		register_block_type( SLOT_PAGES_PLUGIN_DIR . 'blocks/slots-grid' );
-
-		// Register slot detail block
-		register_block_type( SLOT_PAGES_PLUGIN_DIR . 'blocks/slot-detail' );
 	}
 
 }

@@ -3,7 +3,7 @@
     const {InspectorControls} = editor;
     const {PanelBody, RangeControl, SelectControl} = components;
 
-    registerBlockType('slots-pages/slots-grid', {
+    registerBlockType('slot-pages/slots-grid', {
         title: 'Slots Grid',
         icon: 'grid-view',
         category: 'widgets',
@@ -14,7 +14,7 @@
             },
             columns: {
                 type: 'number',
-                default: 3
+                default: 2
             },
             order: {
                 type: 'string',
