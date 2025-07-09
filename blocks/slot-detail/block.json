@@ -1,0 +1,15 @@
+{
+  "apiVersion": 2,
+  "name": "slots-pages/slot-detail",
+  "title": "Slot Detail",
+  "category": "widgets",
+  "icon": "admin-post",
+  "description": "Displays detailed information of a single slot.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "slot-pages",
+  "editorScript": "slot-detail-editor-script",
+  "style": "slot-detail-style",
+  "render": "file:./render.php"
+}
