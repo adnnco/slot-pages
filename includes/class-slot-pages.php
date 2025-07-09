@@ -57,6 +57,9 @@ class Slot_Pages {
 		add_action( 'add_meta_boxes_slot', [ $this, 'add_meta_boxes' ] );
 		add_action( 'save_post_slot', [ $this, 'save_meta_boxes' ], 10, 2 );
 
+		// Register blocks
+		add_action( 'init', [ $this, 'register_blocks' ] );
+
 		// Enqueue admin styles
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_admin_assets' ] );
 	}
@@ -312,4 +315,32 @@ class Slot_Pages {
 			}
 		}
 	}
+
+	/**
+	 * Register custom blocks
+	 */
+
+	public function register_blocks(): void {
+		if ( ! function_exists( 'register_block_type' ) ) {
+			return;
+		}
+
+		wp_register_script(
+			'slots-grid-editor-script',
+			SLOT_PAGES_PLUGIN_URL . 'blocks/slots-grid/index.js',
+			[ 'wp-blocks', 'wp-element', 'wp-editor', 'wp-components' ],
+			SLOT_PAGES_VERSION,
+			true
+		);
+
+		wp_register_style(
+			'slots-grid-style',
+			SLOT_PAGES_PLUGIN_URL . 'blocks/slots-grid/style.css',
+			[],
+			SLOT_PAGES_VERSION
+		);
+
+		register_block_type( SLOT_PAGES_PLUGIN_DIR . 'blocks/slots-grid' );
+	}
+
 }

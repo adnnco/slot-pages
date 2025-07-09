@@ -1,0 +1,27 @@
+{
+  "apiVersion": 2,
+  "name": "slots-pages/slots-grid",
+  "title": "Slots Grid",
+  "category": "widgets",
+  "icon": "grid-view",
+  "description": "Displays a grid of slot posts with options for limit and sorting.",
+  "attributes": {
+    "attributes": {
+      "limit": {
+        "type": "number",
+        "default": 6
+      },
+      "columns": {
+        "type": "number",
+        "default": 3
+      },
+      "order": {
+        "type": "string",
+        "default": "recent"
+      }
+    }
+  },
+  "editorScript": "slots-grid-editor-script",
+  "style": "slots-grid-style",
+  "render": "file:./render.php"
+}
