@@ -10,7 +10,6 @@ if (function_exists( 'register_block_type' ) && WP_Block_Type_Registry::get_inst
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
