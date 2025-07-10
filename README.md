@@ -111,6 +111,7 @@ slot-pages/
 │   ├── PostTypes.php
 │   └── Taxonomies.php
 ├── CHANGELOG.md
+├── NONCODECHALLENGE.md
 ├── README.md
 └── slot-pages.php
 ```
