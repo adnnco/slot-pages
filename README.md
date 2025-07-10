@@ -118,6 +118,7 @@ slot-pages/
 ├── templates/
 │   └── single-slot.php
 ├── CHANGELOG.md
+├── NONCODECHALLENGE.md
 ├── README.md
 └── slot-pages.php
 ```
