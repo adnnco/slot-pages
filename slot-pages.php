@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Plugin version.
  */
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 
 /**
  * Plugin directory path.
@@ -75,8 +75,6 @@ function init(): void {
 	$plugin = Core::get_instance();
 	$plugin->init();
 
-	// Load text domain.
-	load_plugin_textdomain( 'slot-pages', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\init' );

@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-// Ensure the post type is 'slot'
+// Ensure the post-type is 'slot'
 if ( get_post_type() !== PostTypes::POST_TYPE ) {
 	return '';
 }
@@ -19,12 +19,13 @@ if ( get_post_type() !== PostTypes::POST_TYPE ) {
 // Get the additional class if provided
 $class_name = isset( $attributes['className'] ) ? ' ' . sanitize_html_class( $attributes['className'] ) : '';
 
-// Get post meta data once to avoid multiple database calls
+// Get post meta-data once to avoid multiple database calls
 $post_id = get_the_ID();
 
 // Get meta fields configuration
 $meta_fields = Blocks::get_meta_fields_config();
 
+// Start output buffering to capture the HTML output
 ob_start();
 ?>
     <div class="slot-detail-container<?php echo esc_attr( $class_name ); ?>">
@@ -49,5 +50,4 @@ ob_start();
 			?>
         </div>
     </div>
-	<?php
-echo ob_get_clean(); // Clear the output buffer and return the content
+	<?php echo ob_get_clean(); // Clear the output buffer and return the content
