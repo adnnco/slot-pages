@@ -1,78 +1,72 @@
 <?php
 /**
- * Template for displaying single slot details
- *
- * This template is used when a theme doesn't provide its own template for displaying slot details.
- * It provides a fallback that ensures slot details are displayed consistently across themes.
- *
- * @package SlotPages
+ * Template for displaying single slot posts
  */
 
-namespace SlotPages;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
-
-// Ensure we're viewing a slot post type
-if ( get_post_type() !== PostTypes::POST_TYPE ) {
-	return;
-}
-
-get_header();
-?>
-
-<div id="primary" class="content-area">
-	<main id="main" class="site-main">
-
-	<?php
-	while ( have_posts() ) :
-		the_post();
-		
-		// Get post meta-data once to avoid multiple database calls
-		$post_id = get_the_ID();
-		
-		// Get meta fields configuration
-		$meta_fields = Blocks::get_meta_fields_config();
-		?>
-		
-		<article id="post-<?php the_ID(); ?>" <?php post_class( 'slot-single' ); ?>>
-			<div class="slot-detail-container">
-				<div class="slot-header">
-					<?php if ( has_post_thumbnail() ) : ?>
-						<div class="slot-thumbnail-wrapper">
-							<?php the_post_thumbnail( 'large', [ 'class' => 'slot-thumbnail' ] ); ?>
-						</div>
-					<?php endif; ?>
-					
-					<h1 class="slot-title entry-title"><?php the_title(); ?></h1>
-				</div>
-
-				<div class="slot-meta-info">
-					<?php
-					foreach ( $meta_fields as $key => $config ) {
-						$value = get_post_meta( $post_id, $key, true );
-						if ( $value ) {
-							echo '<div class="slot-meta-item ' . esc_attr( str_replace( '_slot_', '', $key ) ) . '">';
-							echo '<span class="meta-label">' . esc_html( $config['label'] ) . ': </span>';
-							echo Blocks::format_meta_value( $value, $config['format'] );
-							echo '</div>';
-						}
-					}
-					?>
-				</div>
-
-				<div class="slot-content entry-content">
-					<?php the_content(); ?>
-				</div>
-			</div>
-		</article>
-
-	<?php endwhile; ?>
-
-	</main><!-- #main -->
-</div><!-- #primary -->
-
+// Check if the block is registered
+if (function_exists( 'register_block_type' ) && WP_Block_Type_Registry::get_instance()->is_registered( 'slot-pages/slot-detail' )) {
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
 <?php
-get_sidebar();
-get_footer();
+$theme = wp_get_theme()->get_stylesheet();
+echo do_blocks( '<!-- wp:template-part {"slug":"header","theme":"' . esc_js( $theme ) . '","tagName":"header"} /-->' );
+echo do_blocks( '<!-- wp:slot-pages/slot-detail /-->' );
+if ( function_exists( 'wp_head' ) ) {
+	wp_head();
+}
+echo do_blocks( '<!-- wp:template-part {"slug":"footer","theme":"' . esc_js( $theme ) . '","tagName":"footer"} /-->' );
+?>
+<?php if ( function_exists( 'wp_footer' ) ) {
+	wp_footer();
+} ?>
+</body>
+</html>
+<?php
+} else {
+	get_header();
+
+	// Fallback to traditional template
+	?>
+    <div class="slot-detail">
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <h1><?php the_title(); ?></h1>
+            <div class="slot-thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
+            <div class="slot-content"><?php the_content(); ?></div>
+
+            <ul class="slot-meta">
+                <li>
+                    <strong>Star Rating:</strong>
+					<?php
+					$rating = get_post_meta( get_the_ID(), '_slot_rating', true );
+					echo esc_html( $rating );
+					?>
+                </li>
+                <li>
+                    <strong>Provider:</strong>
+					<?php echo esc_html( get_post_meta( get_the_ID(), '_slot_provider', true ) ); ?>
+                </li>
+                <li>
+                    <strong>RTP:</strong>
+					<?php echo esc_html( get_post_meta( get_the_ID(), '_slot_rtp', true ) ); ?>
+                </li>
+                <li>
+                    <strong>Min Wager:</strong>
+					<?php echo esc_html( get_post_meta( get_the_ID(), '_slot_min_wager', true ) ); ?>
+                </li>
+                <li>
+                    <strong>Max Wager:</strong>
+					<?php echo esc_html( get_post_meta( get_the_ID(), '_slot_max_wager', true ) ); ?>
+                </li>
+            </ul>
+		<?php endwhile; endif; ?>
+    </div>
+	<?php
+	get_footer();
+}
