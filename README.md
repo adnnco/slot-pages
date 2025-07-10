@@ -79,6 +79,109 @@ The plugin includes CSS files for styling the blocks:
 
 You can customize these files or override the styles in your theme's CSS.
 
+## Developer Documentation
+
+### Plugin Structure
+
+The plugin follows a modern object-oriented architecture with proper namespacing:
+
+```
+slot-pages/
+├── assets/
+│   └── css/
+│       └── slot-admin.css
+├── blocks/
+│   ├── slot-detail/
+│   │   ├── block.json
+│   │   ├── index.js
+│   │   ├── render.php
+│   │   └── style.css
+│   └── slots-grid/
+│       ├── block.json
+│       ├── index.js
+│       ├── render.php
+│       └── style.css
+├── classes/
+│   ├── Admin.php
+│   ├── Blocks.php
+│   ├── Core.php
+│   ├── PostTypes.php
+│   ├── Taxonomies.php
+│   └── class-slot-pages.php (legacy)
+├── CHANGELOG.md
+├── README.md
+└── slot-pages.php
+```
+
+### Class Structure
+
+- **Core**: Main plugin class with singleton pattern that initializes all components
+- **PostTypes**: Handles custom post type registration and meta fields
+- **Taxonomies**: Handles taxonomy registration and term retrieval
+- **Blocks**: Manages Gutenberg blocks registration and rendering
+- **Admin**: Handles admin-specific functionality
+
+### Extending the Plugin
+
+To add new functionality:
+
+1. Create a new class in the `classes/` directory
+2. Add the class to the namespace `SlotPages`
+3. Initialize the class in the `Core::__construct()` method
+
+Example:
+
+```php
+<?php
+/**
+ * My custom functionality.
+ *
+ * @package SlotPages
+ */
+
+namespace SlotPages;
+
+/**
+ * Class for my custom functionality.
+ */
+class MyCustomClass {
+    /**
+     * Initialize hooks and actions.
+     *
+     * @return void
+     */
+    public function init(): void {
+        // Add your hooks and actions here.
+    }
+}
+```
+
+Then update the Core class:
+
+```php
+private function __construct() {
+    // Initialize components.
+    $this->post_types = new PostTypes();
+    $this->taxonomies = new Taxonomies();
+    $this->blocks     = new Blocks();
+    $this->admin      = new Admin();
+    $this->my_custom  = new MyCustomClass(); // Add your class here.
+}
+
+public function init(): void {
+    // Initialize components.
+    $this->post_types->init();
+    $this->taxonomies->init();
+    $this->blocks->init();
+    $this->admin->init();
+    $this->my_custom->init(); // Initialize your class.
+}
+```
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a detailed list of changes.
+
 ## Support
 
 For support or feature requests, please visit [the plugin's GitHub repository](https://github.com/adnnco/slot-pages).
