@@ -8,6 +8,12 @@
   "supports": {
     "html": false
   },
+  "attributes": {
+    "selectedSlot": {
+      "type": "number",
+      "default": 0
+    }
+  },
   "textdomain": "slot-pages",
   "editorScript": "slot-detail-editor-script",
   "style": "slot-detail-style",

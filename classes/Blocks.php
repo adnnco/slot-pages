@@ -71,7 +71,7 @@ class Blocks {
 		wp_register_script(
 			'slot-detail-editor-script',
 			SLOT_PAGES_PLUGIN_URL . 'blocks/slot-detail/index.js',
-			[ 'wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-block-editor' ],
+			[ 'wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-block-editor', 'wp-i18n', 'wp-data' ],
 			SLOT_PAGES_VERSION,
 			true
 		);
