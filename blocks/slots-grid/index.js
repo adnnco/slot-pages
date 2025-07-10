@@ -2,6 +2,8 @@
     const {registerBlockType} = blocks;
     const {InspectorControls} = editor;
     const {PanelBody, RangeControl, SelectControl} = components;
+    const __ = wp.i18n.__;
+
 
     registerBlockType('slot-pages/slots-grid', {
         title: 'Slots Grid',
@@ -58,7 +60,16 @@
                         })
                     )
                 ),
-                wp.element.createElement('p', {}, 'Slots Grid Block – rendered on frontend.')
+                wp.element.createElement(
+                    'div',
+                    {className: 'slots-grid-block-editor'},
+                    wp.element.createElement(
+                        'p',
+                        {},
+                        __('Slots Grid Block – Please configure grid settings in the sidebar.', 'slot-pages')
+                    )
+                )
+
             ];
         },
         save: function () {

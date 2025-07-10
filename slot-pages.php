@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Plugin version.
  */
-const VERSION = '1.0.2';
+const VERSION = '1.0.21';
 
 /**
  * Plugin directory path.
