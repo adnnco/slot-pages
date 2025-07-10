@@ -3,7 +3,7 @@
  * Plugin Name: Slot Pages
  * Plugin URI: https://github.com/adnnco/slot-pages
  * Description: A plugin to manage and display slot information in a user-friendly and SEO-friendly way.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Requires at least: 6.4.1
  * Requires PHP: 8.2
  * Author: adnnco
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Plugin version.
  */
-const VERSION = '1.0.1';
+const VERSION = '1.0.2';
 
 /**
  * Plugin directory path.

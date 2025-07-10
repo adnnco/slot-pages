@@ -24,6 +24,10 @@ The plugin creates a custom post type for slots with various meta fields to stor
 - **Internationalization**:
   - Full translation support with text domain
   - Includes translations for Turkish (tr_TR) and Spanish (es_ES)
+- **Template System**:
+  - Custom template for single slot pages
+  - Theme override capability (theme's single-slot.php takes precedence)
+  - Fallback to plugin's template when theme doesn't provide one
 
 ## Requirements
 
@@ -109,7 +113,10 @@ slot-pages/
 │   ├── Blocks.php
 │   ├── Core.php
 │   ├── PostTypes.php
-│   └── Taxonomies.php
+│   ├── Taxonomies.php
+│   └── Templates.php
+├── templates/
+│   └── single-slot.php
 ├── CHANGELOG.md
 ├── README.md
 └── slot-pages.php
@@ -121,6 +128,7 @@ slot-pages/
 - **PostTypes**: Handles custom post type registration and meta fields
 - **Taxonomies**: Handles taxonomy registration and term retrieval
 - **Blocks**: Manages Gutenberg blocks registration and rendering
+- **Templates**: Handles custom template loading for single slot pages
 - **Admin**: Handles admin-specific functionality
 
 ### Extending the Plugin
@@ -166,6 +174,7 @@ private function __construct() {
     $this->post_types = new PostTypes();
     $this->taxonomies = new Taxonomies();
     $this->blocks     = new Blocks();
+    $this->templates  = new Templates();
     $this->admin      = new Admin();
     $this->my_custom  = new MyCustomClass(); // Add your class here.
 }
@@ -175,6 +184,7 @@ public function init(): void {
     $this->post_types->init();
     $this->taxonomies->init();
     $this->blocks->init();
+    $this->templates->init();
     $this->admin->init();
     $this->my_custom->init(); // Initialize your class.
 }

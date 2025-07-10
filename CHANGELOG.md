@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 1.0.2
+
+### Template System
+- Added a custom template system for single slot pages
+- Created a templates directory with single-slot.php template
+- Added Templates class to handle template loading
+- Implemented theme template override capability (theme's single-slot.php takes precedence)
+- Ensured compatibility with both Gutenberg blocks and PHP templates
+
 ## Version 1.0.1
 
 ### Internationalization

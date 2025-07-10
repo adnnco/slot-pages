@@ -42,6 +42,13 @@ class Core {
 	private ?Blocks $blocks = null;
 
 	/**
+	 * Templates instance.
+	 *
+	 * @var Templates|null
+	 */
+	private ?Templates $templates = null;
+
+	/**
 	 * Admin instance.
 	 *
 	 * @var Admin|null
@@ -69,6 +76,7 @@ class Core {
 		$this->post_types = new PostTypes();
 		$this->taxonomies = new Taxonomies();
 		$this->blocks     = new Blocks();
+		$this->templates  = new Templates();
 		$this->admin      = new Admin();
 	}
 
@@ -82,6 +90,7 @@ class Core {
 		$this->post_types->init();
 		$this->taxonomies->init();
 		$this->blocks->init();
+		$this->templates->init();
 		$this->admin->init();
 
 		// Register activation and deactivation hooks.
