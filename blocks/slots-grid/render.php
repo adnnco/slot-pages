@@ -80,8 +80,7 @@ ob_start();
 							}
 							?>
                         </div>
-                        <a href="<?php the_permalink(); ?>"
-                           class="slot-more-info"><?php esc_html_e( 'More Info', 'slot-pages' ); ?></a>
+                        <a href="<?php the_permalink(); ?>" class="slot-more-info"><?php esc_html_e( 'More Info', 'slot-pages' ); ?></a>
                     </div>
 				<?php endwhile; ?>
             </div>

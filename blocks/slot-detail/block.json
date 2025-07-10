@@ -1,6 +1,6 @@
 {
   "apiVersion": 2,
-  "name": "slots-pages/slot-detail",
+  "name": "slot-pages/slot-detail",
   "title": "Slot Detail",
   "category": "widgets",
   "icon": "admin-post",

@@ -342,6 +342,22 @@ class Slot_Pages {
 		);
 
 		register_block_type( SLOT_PAGES_PLUGIN_DIR . 'blocks/slots-grid' );
+
+		wp_register_script(
+			'slot-detail-editor-script',
+			SLOT_PAGES_PLUGIN_URL . 'blocks/slot-detail/index.js',
+			[ 'wp-blocks', 'wp-element', 'wp-editor', 'wp-components' ],
+			SLOT_PAGES_VERSION,
+			true
+		);
+
+		wp_register_style(
+			'slot-detail-style',
+			SLOT_PAGES_PLUGIN_URL . 'blocks/slot-detail/style.css',
+			[],
+			SLOT_PAGES_VERSION
+		);
+		register_block_type( SLOT_PAGES_PLUGIN_DIR . 'blocks/slot-detail' );
 	}
 
 }

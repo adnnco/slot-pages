@@ -1,6 +1,6 @@
 (function (blocks) {
     var el = wp.element.createElement;
-    blocks.registerBlockType('slots-pages/slot-detail', {
+    blocks.registerBlockType('slot-pages/slot-detail', {
         title: 'Slot Detail',
         icon: 'admin-post',
         category: 'widgets',

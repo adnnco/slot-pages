@@ -6,7 +6,7 @@
 }
 
 /* Grid layout with responsive columns */
-.slots-grid {
+.slots-grid-container .slots-grid {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(1, 1fr);
@@ -14,31 +14,31 @@
 
 /* Responsive breakpoints */
 @media (min-width: 576px) {
-    .slots-grid {
+    .slots-grid-container .slots-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 768px) {
-    .slots-grid {
+    .slots-grid-container .slots-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 992px) {
-    .slots-grid {
+    .slots-grid-container .slots-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (min-width: 1200px) {
-    .slots-grid {
+    .slots-grid-container .slots-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
 /* Card styling */
-.slot-card {
+.slots-grid-container .slot-card {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
@@ -51,13 +51,13 @@
     border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.slot-card:hover {
+.slots-grid-container .slot-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(191, 219, 254, 0.5);
 }
 
 /* Thumbnail */
-.slot-thumbnail {
+.slots-grid-container .slot-thumbnail {
     display: block;
     overflow: hidden;
     position: relative;
@@ -65,37 +65,37 @@
     height: 200px;
 }
 
-.slot-thumbnail img {
+.slots-grid-container .slot-thumbnail img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.slot-card:hover .slot-thumbnail img {
+.slots-grid-container .slot-card:hover .slot-thumbnail img {
     transform: scale(1.05);
 }
 
 /* Content area */
-.slot-card h3 {
+.slots-grid-container .slot-card h3 {
     font-size: 1.25rem;
     font-weight: 700;
     margin: 1rem 1.5rem 0.5rem;
     line-height: 1.3;
 }
 
-.slot-card h3 a {
+.slots-grid-container .slot-card h3 a {
     color: #222;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.slot-card h3 a:hover {
+.slots-grid-container .slot-card h3 a:hover {
     color: #2563eb;
 }
 
 /* Star rating */
-.star-rating {
+.slots-grid-container .star-rating {
     color: #ffc107;
     font-size: 1.1rem;
     letter-spacing: 2px;
@@ -103,7 +103,7 @@
 }
 
 /* Meta information */
-.slot-meta-info {
+.slots-grid-container .slot-meta-info {
     padding: 0 1.5rem;
     display: flex;
     flex-direction: column;
@@ -111,7 +111,7 @@
     margin-bottom: 1rem;
 }
 
-.slot-meta-item {
+.slots-grid-container .slot-meta-item {
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
@@ -119,26 +119,26 @@
     border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
 }
 
-.slot-meta-item:last-child {
+.slots-grid-container .slot-meta-item:last-child {
     border-bottom: none;
 }
 
-.meta-label {
+.slots-grid-container .meta-label {
     color: #666;
     font-weight: 500;
 }
 
-.meta-value {
+.slots-grid-container .meta-value {
     color: #333;
     font-weight: 600;
 }
 
-.meta-value.star-rating {
+.slots-grid-container .meta-value.star-rating {
     margin: 0;
 }
 
 /* Call to action */
-.slot-more-info {
+.slots-grid-container .slot-more-info {
     background-color: #2563eb;
     color: #fff!important;
     text-decoration: none;
@@ -155,14 +155,14 @@
     letter-spacing: 0.5px;
 }
 
-.slot-more-info:hover {
+.slots-grid-container .slot-more-info:hover {
     background-color: #1d4ed8;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(191, 219, 254, 0.25);
 }
 
 /* No slots message */
-.no-slots {
+.slots-grid-container .no-slots {
     text-align: center;
     padding: 2rem;
     font-size: 1.1rem;
@@ -172,15 +172,15 @@
 }
 
 /* Custom styles for each meta type */
-.slot-meta-item.provider .meta-value {
+.slots-grid-container .slot-meta-item.provider .meta-value {
     color: #0066cc;
 }
 
-.slot-meta-item.rtp .meta-value {
+.slots-grid-container .slot-meta-item.rtp .meta-value {
     color: #28a745;
 }
 
-.slot-meta-item.min_wager .meta-value,
-.slot-meta-item.max_wager .meta-value {
+.slots-grid-container .slot-meta-item.min_wager .meta-value,
+.slots-grid-container .slot-meta-item.max_wager .meta-value {
     color: #e67e22;
 }

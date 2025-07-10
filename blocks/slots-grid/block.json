@@ -6,24 +6,18 @@
   "icon": "grid-view",
   "description": "Displays a grid of slot posts with options for limit and sorting.",
   "attributes": {
-    "attributes": {
-      "limit": {
-        "type": "number",
-        "default": 6
-      },
-      "columns": {
-        "type": "number",
-        "default": 2
-      },
-      "order": {
-        "type": "string",
-        "default": "recent"
-      }
+    "limit": {
+      "type": "number",
+      "default": 6
+    },
+    "columns": {
+      "type": "number",
+      "default": 2
+    },
+    "order": {
+      "type": "string",
+      "default": "recent"
     }
-  },
-  "supports": {
-    "html": false,
-    "className": true
   },
   "editorScript": "slots-grid-editor-script",
   "style": "slots-grid-style",
