@@ -65,9 +65,6 @@ spl_autoload_register( function ( $class ) {
 	}
 } );
 
-// Include legacy class for backward compatibility
-require_once SLOT_PAGES_PLUGIN_DIR . 'classes/class-slot-pages.php';
-
 /**
  * Initialize the plugin.
  *
