@@ -21,6 +21,9 @@ The plugin creates a custom post type for slots with various meta fields to stor
 - **Custom Gutenberg Blocks**:
   - **Slots Grid**: Displays a grid of slots with configurable options for limit, columns, and sorting
   - **Slot Detail**: Displays detailed information about a single slot
+- **Internationalization**:
+  - Full translation support with text domain
+  - Includes translations for Turkish (tr_TR) and Spanish (es_ES)
 
 ## Requirements
 
@@ -106,8 +109,7 @@ slot-pages/
 │   ├── Blocks.php
 │   ├── Core.php
 │   ├── PostTypes.php
-│   ├── Taxonomies.php
-│   └── class-slot-pages.php (legacy)
+│   └── Taxonomies.php
 ├── CHANGELOG.md
 ├── README.md
 └── slot-pages.php

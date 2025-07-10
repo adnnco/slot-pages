@@ -1,0 +1,255 @@
+# Copyright (C) 2025 adnnco
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Slot Pages 1.0.1\n"
+"Report-Msgid-Bugs-To: https://github.com/adnnco/slot-pages\n"
+"POT-Creation-Date: 2025-07-10 19:00+0000\n"
+"PO-Revision-Date: 2025-07-10 22:05+0200\n"
+"Last-Translator: adnnco\n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+"X-Domain: slot-pages\n"
+
+#: blocks/slot-detail/index.js:15
+msgid "Slot Detail"
+msgstr "Slot Detayı"
+
+#: blocks/slot-detail/index.js:18
+msgid "Displays detailed information about a single slot."
+msgstr "Tek bir slot hakkında detaylı bilgi gösterir."
+
+#: blocks/slot-detail/index.js:19
+msgid "slot"
+msgstr "slot"
+
+#: blocks/slot-detail/index.js:19
+msgid "detail"
+msgstr "detay"
+
+#: blocks/slot-detail/index.js:19 blocks/slots-grid/index.js:20
+msgid "casino"
+msgstr "casino"
+
+#: blocks/slot-detail/index.js:32
+msgid "Displays detailed information about the current slot. This block is rendered on the frontend."
+msgstr "Mevcut slot hakkında detaylı bilgi gösterir. Bu blok ön yüzde render edilir."
+
+#: blocks/slots-grid/index.js:16
+msgid "Slots Grid"
+msgstr "Slot Izgarası"
+
+#: blocks/slots-grid/index.js:19
+msgid "Displays a grid of slot posts with options for limit and sorting."
+msgstr "Limit ve sıralama seçenekleriyle slot yazılarının bir ızgarasını gösterir."
+
+#: blocks/slots-grid/index.js:20
+msgid "slots"
+msgstr "slotlar"
+
+#: blocks/slots-grid/index.js:20
+msgid "grid"
+msgstr "ızgara"
+
+#: blocks/slots-grid/index.js:48
+msgid "Grid Settings"
+msgstr "Izgara Ayarları"
+
+#: blocks/slots-grid/index.js:50
+msgid "Number of Slots"
+msgstr "Slot Sayısı"
+
+#: blocks/slots-grid/index.js:57
+msgid "Columns"
+msgstr "Sütunlar"
+
+#: blocks/slots-grid/index.js:62
+msgid "Number of columns in the grid"
+msgstr "Izgaradaki sütun sayısı"
+
+#: blocks/slots-grid/index.js:65
+msgid "Sorting"
+msgstr "Sıralama"
+
+#: blocks/slots-grid/index.js:68
+msgid "Recent"
+msgstr "Yeni"
+
+#: blocks/slots-grid/index.js:69
+msgid "Random"
+msgstr "Rastgele"
+
+#: blocks/slots-grid/index.js:79
+msgid "Displays a grid of slot posts. This block is rendered on the frontend."
+msgstr "Slot yazılarının bir ızgarasını gösterir. Bu blok ön yüzde render edilir."
+
+#: blocks/slots-grid/index.js:83
+msgid "Current Settings:"
+msgstr "Mevcut Ayarlar:"
+
+#: blocks/slots-grid/index.js:86
+msgid "Limit:"
+msgstr "Limit:"
+
+#: blocks/slots-grid/index.js:87
+msgid "Columns:"
+msgstr "Sütunlar:"
+
+#: blocks/slots-grid/index.js:88
+msgid "Order:"
+msgstr "Sıralama:"
+
+#: blocks/slots-grid/render.php:64
+msgid "More Info"
+msgstr "Daha Fazla Bilgi"
+
+#: blocks/slots-grid/render.php:69 classes/PostTypes.php:93
+msgid "No slots found."
+msgstr "Slot bulunamadı."
+
+#: classes/Admin.php:59 classes/Admin.php:77
+msgid "Slot Pages Settings"
+msgstr "Slot Sayfaları Ayarları"
+
+#: classes/Admin.php:60
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: classes/Admin.php:78
+msgid "Settings for the Slot Pages plugin."
+msgstr "Slot Sayfaları eklentisi için ayarlar."
+
+#: classes/Blocks.php:128
+msgid "Rating"
+msgstr "Değerlendirme"
+
+#: classes/Blocks.php:129
+msgid "Provider"
+msgstr "Sağlayıcı"
+
+#: classes/Blocks.php:130
+msgid "RTP"
+msgstr "RTP"
+
+#: classes/Blocks.php:131
+msgid "Min Wager"
+msgstr "Minimum Bahis"
+
+#: classes/Blocks.php:132
+msgid "Max Wager"
+msgstr "Maksimum Bahis"
+
+#: classes/PostTypes.php:82 classes/PostTypes.php:84
+msgid "Slots"
+msgstr "Slotlar"
+
+#: classes/PostTypes.php:83 classes/PostTypes.php:85
+msgid "Slot"
+msgstr "Slot"
+
+#: classes/PostTypes.php:86
+msgid "Add New"
+msgstr "Yeni Ekle"
+
+#: classes/PostTypes.php:87
+msgid "Add New Slot"
+msgstr "Yeni Slot Ekle"
+
+#: classes/PostTypes.php:88
+msgid "New Slot"
+msgstr "Yeni Slot"
+
+#: classes/PostTypes.php:89
+msgid "Edit Slot"
+msgstr "Slotu Düzenle"
+
+#: classes/PostTypes.php:90
+msgid "View Slot"
+msgstr "Slotu Görüntüle"
+
+#: classes/PostTypes.php:91
+msgid "All Slots"
+msgstr "Tüm Slotlar"
+
+#: classes/PostTypes.php:92
+msgid "Search Slots"
+msgstr "Slotları Ara"
+
+#: classes/PostTypes.php:94
+msgid "No slots found in Trash."
+msgstr "Çöp kutusunda slot bulunamadı."
+
+#: classes/PostTypes.php:125
+msgid "Slot Attributes"
+msgstr "Slot Özellikleri"
+
+#: classes/PostTypes.php:217
+msgid "Select a Provider"
+msgstr "Bir Sağlayıcı Seçin"
+
+#: classes/Taxonomies.php:38
+msgctxt "taxonomy general name"
+msgid "Providers"
+msgstr "Sağlayıcılar"
+
+#: classes/Taxonomies.php:39
+msgctxt "taxonomy singular name"
+msgid "Provider"
+msgstr "Sağlayıcı"
+
+#: classes/Taxonomies.php:40
+msgid "Search Providers"
+msgstr "Sağlayıcıları Ara"
+
+#: classes/Taxonomies.php:41
+msgid "All Providers"
+msgstr "Tüm Sağlayıcılar"
+
+#: classes/Taxonomies.php:42
+msgid "Parent Provider"
+msgstr "Üst Sağlayıcı"
+
+#: classes/Taxonomies.php:43
+msgid "Parent Provider:"
+msgstr "Üst Sağlayıcı:"
+
+#: classes/Taxonomies.php:44
+msgid "Edit Provider"
+msgstr "Sağlayıcıyı Düzenle"
+
+#: classes/Taxonomies.php:45
+msgid "Update Provider"
+msgstr "Sağlayıcıyı Güncelle"
+
+#: classes/Taxonomies.php:46
+msgid "Add New Provider"
+msgstr "Yeni Sağlayıcı Ekle"
+
+#: classes/Taxonomies.php:47
+msgid "Providers"
+msgstr "Sağlayıcılar"
+
+#: classes/Taxonomies.php:48
+msgid "View Provider"
+msgstr "Sağlayıcıyı Görüntüle"
+
+#: classes/Taxonomies.php:49
+msgid "No providers found."
+msgstr "Sağlayıcı bulunamadı."
+
+#: classes/Taxonomies.php:50
+msgid "No providers found in Trash."
+msgstr "Çöp kutusunda sağlayıcı bulunamadı."
+
+#: classes/Taxonomies.php:51
+msgid "Providers list navigation"
+msgstr "Sağlayıcı listesi navigasyonu"
+
+#: classes/Taxonomies.php:52
+msgid "Providers list"
+msgstr "Sağlayıcı listesi"

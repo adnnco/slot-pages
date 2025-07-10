@@ -1,12 +1,22 @@
 # Changelog
 
+## Version 1.0.1
+
+### Internationalization
+- Added translation support with language files
+- Added Turkish (tr_TR) translation
+- Added Spanish (es_ES) translation
+- Enhanced translation loading with direct `load_textdomain` calls for better compatibility
+- Added validation checks for .mo files to prevent errors with placeholder files
+- Added README.md with instructions for generating proper .mo files from .po files
+
 ## Version 1.0.0 (Refactored)
 
 ### Code Organization and Structure
 - Added proper namespacing (`SlotPages`) to all plugin files
 - Implemented a modern class structure with separate classes for different functionality:
-  - `Core`: Main plugin class with singleton pattern
-  - `PostTypes`: Handles custom post type registration and meta fields
+  - `Core`: Main plugin class with a singleton pattern
+  - `PostTypes`: Handles custom post-type registration and meta-fields
   - `Taxonomies`: Handles taxonomy registration and term retrieval
   - `Blocks`: Manages Gutenberg blocks registration and rendering
   - `Admin`: Handles admin-specific functionality
@@ -22,7 +32,7 @@
 ### Performance Enhancements
 - Replaced `time()` with static version number for better caching
 - Improved taxonomy term retrieval with error handling
-- Reduced duplicate code by centralizing meta field definitions
+- Reduced duplicate code by centralizing meta-field definitions
 - Added proper dependency management for scripts
 
 ### WordPress Coding Standards
